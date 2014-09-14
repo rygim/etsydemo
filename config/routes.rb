@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
-
   devise_for :users
   resources :listings do 
-    resorces :orders, only: [:new, :create]
+    resources :orders  
   end
+
+
 
   get 'pages/about'
   get 'pages/contact'
